@@ -17,11 +17,12 @@ const page = {
     
     },
      
-    popup: {
+    popap: {
         index: document.getElementById('addHabbitPopup')
     }
            
  }
+
 
 function loadData() {
     const habbitsStr = localStorage.getItem(HabitKey)
@@ -35,12 +36,13 @@ function saveData() {
     localStorage.setItem(HabitKey, JSON.stringify(habbits))
 }
 
-function togglePopup (){
-    if(page.popup.index.classList.contains('coverHidenn')){
-        page.popup.index.remove('coverHidenn')
+function togglePopup(){
+    if(page.popap.index.classList.contains('coverHidenn')){
+        page.popap.index.remove('coverHidenn')
     } else {
-        page.popup.index.classList.contains('coverHidenn')
+        page.popap.index.classList.add('coverHidenn')
     }
+    console.log('popap')
 }
 
 function rerendMenu(activeHabit) {
