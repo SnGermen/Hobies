@@ -230,3 +230,117 @@ input.error{
 .bb:hover{
 color: #3434a9;
 }   
+
+
+.cover {
+ position: fixed;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ top: 0;
+ background: rgba(56, 56, 56, 0.25) ;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+
+
+.popap{
+    background: #ffffff;
+    box-shadow: 0px 8px 14px 12px rgba(56, 56, 56, 0.05);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.popap__close{ 
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+h2{
+    font-size: 30px;
+font-family: Comfortaa;
+font-weight: 400;
+line-height: 27px;
+
+}
+
+
+.iconLabel{
+  font-size: 14px;
+  line-height: 16px;
+  color: #768396;
+  margin: 10px;
+}
+
+.select{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.icon{
+    border: 1px solid #5051F9;
+    border-radius: 14px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.icon_active{
+    background: #5051F9;;
+}
+
+
+.icon :hover{
+    background: #6A6AFB;
+   }
+
+   .icon :hover img{
+    background: #6A6AFB;
+   }
+
+.icon_active img{
+filter: brightness(0) invert(1);
+}
+
+
+.popupForm{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.popupForm input{
+    width: 100%;
+
+
+}
+
+/* .coverHidenn{
+
+    display: none;
+} */
