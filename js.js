@@ -13,7 +13,15 @@ const page = {
     context: {
         daysContainer: document.getElementById('days'),
         nextDay: document.querySelector('.habDay')
-    }}
+    
+    
+    },
+     
+    popup: {
+        index: document.getElementById('addHabbitPopup')
+    }
+           
+ }
 
 function loadData() {
     const habbitsStr = localStorage.getItem(HabitKey)
@@ -25,6 +33,14 @@ function loadData() {
 
 function saveData() {
     localStorage.setItem(HabitKey, JSON.stringify(habbits))
+}
+
+function togglePopup (){
+    if(page.popup.index.classList.contains('coverHidenn')){
+        page.popup.index.remove('coverHidenn')
+    } else {
+        page.popup.index.classList.contains('coverHidenn')
+    }
 }
 
 function rerendMenu(activeHabit) {
@@ -144,6 +160,10 @@ function Deleted(index){
     rerender(globalActiveHabitId)
     saveData()
 }
+
+
+
+
 
 (() => {
     loadData()

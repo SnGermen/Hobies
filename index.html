@@ -14,7 +14,7 @@
                 <div class="menuList">
                     
                 </div>
-            <button class="add"> <img src="/img/add.svg" alt="add"></button>
+            <button class="add" onclick="togglePopup()" src="/img/add.svg" alt="add"></button>
             </nav>
         </div>
     <div class="content">
@@ -50,7 +50,7 @@
           
         </main>   
     </div>
- <div class="cover coverHidenn">
+ <div class="cover coverHidenn" id="addHabbitPopup">
 <div class="popap">
     <h2>New Hobbie</h2>
     <div class="iconLabel"></div>
@@ -76,7 +76,7 @@
     <button class="bb" type="submit">Add</button>
 
 </form>
-<button class="popap__close">
+<button class="popap__close" onclick="togglePopup()">
 <img src="./img/delete.svg" alt="">
 </button>
 <!-- good -->
