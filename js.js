@@ -18,7 +18,8 @@ const page = {
     },
      
     popap: {
-        index: document.getElementById('addHabbitPopup')
+        index: document.getElementById('addHabbitPopup'),
+        iconField: document.querySelector('.popupForm input[name="icon"]')
     }
            
  }
@@ -166,6 +167,14 @@ function Deleted(index){
 
 
 
+
+function setIcon(context, icon){
+    page.popap.iconField.value = icon
+    const activeIcn = document.querySelector('.icon.icon_active')
+    activeIcn.classList.remove('icon_active')
+    context.classList.add('icon_active')
+
+}
 
 
 (() => {
