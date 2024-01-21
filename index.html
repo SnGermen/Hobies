@@ -72,17 +72,17 @@
 
 </button>
 </div> 
-<form class="popupForm">
+<form class="popupForm" onsubmit="addHabit(event)">
     <input type="text" name="name" placeholder="Put here">
     <input type="text" 
      name="icon"
      hidden 
      value="logo">
     <input type="number" name="target" placeholder="cel here">
-    
+    <button class="bb" type="submit">Add</button>
 
 </form>
-<button class="bb" type="submit">Add</button>
+
 <button class="popap__close" onclick="togglePopup()">
 <img src="./img/delete.svg" alt="">
 </button>
