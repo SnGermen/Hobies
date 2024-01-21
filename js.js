@@ -38,7 +38,7 @@ function saveData() {
 
 function togglePopup(){
     if(page.popap.index.classList.contains('coverHidenn')){
-        page.popap.index.remove('coverHidenn')
+        page.popap.index.classList.remove('coverHidenn')
     } else {
         page.popap.index.classList.add('coverHidenn')
     }
@@ -131,6 +131,7 @@ function adDays(event) {
     form['comment'].classList.remove('error')
     if(!comment){
     form['comment'].classList.add('error')
+    return
     }
     habbits = habbits.map(habbit =>{
         if (habbit.id == globalActiveHabitId){
