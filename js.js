@@ -58,6 +58,7 @@ function resetForm(form, fields){
 
 function validateAndGetform(form, fields){
     const formData = new FormData(form)
+    console.log(formData.get('comment'))
     const res = {}
     for (const  field of fields){
         const fieldValue= formData.get(field);
@@ -184,8 +185,8 @@ function adDays(event) {
 function Deleted(index){
     
     habbits = habbits.map(habbit => {
-        if(habbit.id === globalActiveHabitId){
-             habbit.days.splice(index, 1)
+        if(habbit.id === globalActiveHabitId){ 
+            habbit.days.splice(index, 1)
              return {
                 ...habbit,
                     days: habbit.days

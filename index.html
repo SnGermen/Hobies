@@ -1,97 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobie</title>
     <link rel="stylesheet" href="csss.css">
 </head>
+
 <body>
     <div class="app">
         <div class="panel">
             <img class="l" src="/img/Logomark.png" alt="logo">
             <nav class="menu">
                 <div class="menuList">
-                    
+
                 </div>
-            <button class="add" onclick = "togglePopup()">
-                <img src="/img/add.svg" alt="add"> 
-            </button>
+                <button class="add" onclick="togglePopup()">
+                    <img src="/img/add.svg" alt="add">
+                </button>
             </nav>
         </div>
-    <div class="content">
-        <header>
-            <h1 class="h1">-</h1>
-            <div class="progress">
-                <div class="progresstyp">
-                    <div class="progressName">Progress</div>
-                    <div class="progressPercent"></div>
+        <div class="content">
+            <header>
+                <h1 class="h1"></h1>
+                <div class="progress">
+                    <div class="progresstyp">
+                        <div class="progressName">Progress</div>
+                        <div class="progressPercent"></div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="progressbaract"></div>
+                    </div>
                 </div>
-            <div class="progressbar">
-                <div class="progressbaract"></div>
-            </div>
-            </div>
-        </header>
-        <main>
-        <div class="habbitContainer">
-            <div id="days"></div>
-                <div class="habDay"></div>  
-                <form class="habform" onsubmit="adDays(event)">
-                    <input  name ='comment' 
-                     class="icon"
-                     type="text" 
-                     placeholder="Coments">
-                    
-                     <img class="inp" 
-                    src="/img/group4.svg" 
-                    alt="car">
-                
-               <button  class="bb" type="submit">Ready</button>
+            </header>
+            <main>
+                <div class="habbitContainer">
+                    <div id="days"></div>
+                    <div class="habDay"></div>
+                    <form class="habform" onsubmit="adDays(event)">
+                        <input name='comment' class="icon" type="text" placeholder="Coments">
+
+                        <img class="inp" src="/img/group4.svg" alt="car">
+
+                        <button class="bb" type="submit">Ready</button>
+                    </form>
+                </div>
+
+            </main>
+        </div>
+        <div class="cover coverHidenn" id="addHabbitPopup">
+            <div class="popap">
+                <h2>New Hobbie</h2>
+                <div class="iconLabel">Iconka</div>
+                <div class="select">
+                    <button class="icon icon_active" onclick="setIcon(this, 'logo')">
+                        <img class="icon_osition" src="./img/logo.svg" alt="Sport">
+                    </button>
+
+                    <button class="icon" onclick="setIcon(this, 'food')">
+                        <img class="icon_position" src="./img/food.svg" alt="food">
+                    </button>
+
+                    <button class="icon" onclick="setIcon(this, 'water')">
+                        <img class="icon_osition" src="./img/water.svg" alt="water">
+
+                    </button>
+
+                    </button>
+                </div>
+                <form class="popupForm" onsubmit="addHabit(event)">
+                    <input type="text" name="name" placeholder="Put here">
+                    <input type="text" name="icon" hidden value="logo">
+                    <input type="number" name="target" placeholder="cel here">
+                    <button class="bb" type="submit">Add</button>
+
                 </form>
-                </div>
-          
-        </main>   
-    </div>
- <div class="cover coverHidenn" id="addHabbitPopup">
-<div class="popap">
-    <h2>New Hobbie</h2>
-    <div class="iconLabel">Iconka</div>
-    <div class="select">
-        <button class="icon icon_active" onclick="setIcon(this, 'logo')">
-            <img src="./img/logo.svg" alt="Sport">
-        </button>
 
-        <button class="icon"  onclick="setIcon(this, 'food')" >
-            <img src="./img/food.svg" alt="food">
-        </button>
+                <button class="popap__close" onclick="togglePopup()">
+                    <img src="./img/delete.svg" alt="">
+                </button>
+                <!-- good -->
 
-        <button class="icon"  onclick="setIcon(this, 'water')">
-            <img src="./img/water.svg" alt="water">
-
-        </button>
-
-</button>
-</div> 
-<form class="popupForm" onsubmit="addHabit(event)">
-    <input type="text" name="name" placeholder="Put here">
-    <input type="text" 
-     name="icon"
-     hidden 
-     value="logo">
-    <input type="number" name="target" placeholder="cel here">
-    <button class="bb" type="submit">Add</button>
-
-</form>
-
-<button class="popap__close" onclick="togglePopup()">
-<img src="./img/delete.svg" alt="">
-</button>
-<!-- good -->
-  
-</div>
-</div>
-    <script src="js.js"></script>
+            </div>
+        </div>
+        <script src="js.js"></script>
 </body>
+
 </html>
-
-
